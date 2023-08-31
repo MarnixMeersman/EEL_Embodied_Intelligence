@@ -12,7 +12,7 @@ We have provided two different types of environments for testing and training th
 This project is largely build upon the [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents). Also thanks to the community behind this toolkit.
 
 ## Configuration
-The `Config` folder contains various configuration files for hyperparameters that the model uses for training. Feel free to tweak these parameters to suit your particular needs.
+The `Config` folder contains various configuration files for hyperparameters that the model uses for training. Feel free to tweak these parameters to suit your particular needs. Note that in order to reproduce any of these results, you should clone the ml agents toolkit repo, download unity hub and the latest version of unity editor.
 
 ## Results
 The training and test results can be found in the `Results` folder. You can also visualize the metrics using TensorBoard by running the following command in your terminal:
