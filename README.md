@@ -15,7 +15,7 @@ This project is largely build upon the [Unity ML-Agents Toolkit](https://github.
 The `Config` folder contains various configuration files for hyperparameters that the model uses for training. Feel free to tweak these parameters to suit your particular needs. Note that in order to reproduce any of these results, you should clone the ml agents toolkit repo, download unity hub and the latest version of unity editor.
 
 ## Results
-The training and test results can be found in the `Results` folder. You can also visualize the metrics using TensorBoard by running the following command in your terminal:
+The training and test results can be found on the [public tensorboard](https://tensorboard.dev/experiment/oKkN7ge1QjSlHY9vKnE77Q/#scalars). They can be 'downloaded' from there anf you can also visualize the metrics using TensorBoard locally by running the following command in your terminal:
 ```
 tensorboard --logdir results
 ```
