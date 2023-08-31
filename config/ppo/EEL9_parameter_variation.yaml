@@ -1,0 +1,29 @@
+# This is THE parameter variation config file and no other for PPO. (9 body segments)
+behaviors:
+  Worm:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 2024
+      buffer_size: 20240 #keep it as it was
+      learning_rate: 0.0003
+      beta: #0.005
+        opt_values: [0.00375, 0.00625] # 25% above and below
+      epsilon: # 0.2
+        opt_values: [0.15, 0.25] # 25% above and below
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 512
+      num_layers: # 3
+        opt_values: [2, 4, 6]
+      vis_encode_type: simple
+    reward_signals:
+      extrinsic:
+        gamma: 0.995
+        strength: 1.0
+    keep_checkpoints: 25
+    max_steps: 10000000
+    time_horizon: 1000
+    summary_freq: 30000
