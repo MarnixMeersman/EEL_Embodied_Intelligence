@@ -1,7 +1,7 @@
 # NASA EELS Locomotion Simulation in Unity
 
 ## Introduction
-Welcome to the NASA EELS Locomotion Simulation repository. This project aims to recreate the locomotion types demonstrated by NASA's EELS robot that one day should venture into the oceans of Encaldus, on of Saturns moons. We use Unity as the simulation environment and make extensive use of Unity's ML-Agents toolkit for the machine learning components. Additionally, we have collaborated with OpenAI for cutting-edge algorithms and research.
+Welcome to the NASA EELS Locomotion Simulation repository. This project aims to recreate the locomotion types demonstrated by NASA's EELS robot that one day should venture into the oceans of Encaldus, on of Saturns moons. We use Unity as the simulation environment and make extensive use of Unity's ML-Agents toolkit for the machine learning components. Additionally, we utilize reinforcement learning algorithms provided by OpenAI APO for this research.
 
 We have provided two different types of environments for testing and training the model:
 
