@@ -1,6 +1,8 @@
 # NASA EELS Locomotion Simulation in Unity
 
-Before diving in, please [read and download the full report](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/blob/main/Embodied_Intelligence_NASA_EELS_robot.pdf) for comprehensive background, detailed results, and an in-depth discussion of our methodology.
+Before diving in, please make sure to:
+- [Read and download the full report 📄](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/blob/main/Embodied_Intelligence_NASA_EELS_robot.pdf) for comprehensive background, detailed results, and methodology.
+- Watch the [demo video 🎥](https://youtu.be/LdKwgdQfkKw) to see the simulation in action.
 
 An advanced simulation project that models the locomotion of NASA’s EELS robot using Unity. This project utilizes the ML-Agents toolkit and reinforcement learning algorithms (PPO and SAC) to recreate and analyze complex movement behaviors in environments inspired by Enceladus, one of Saturn’s moons.
 
@@ -138,7 +140,7 @@ Training outcomes can be tracked using TensorBoard. Explore the performance metr
 
 A demonstration video showcasing the simulation in action is available on YouTube:
 
-- [EELS Simulation Demo](https://youtu.be/LdKwgdQfkKw)
+- [EELS Simulation Demo 🎥](https://youtu.be/LdKwgdQfkKw)
 
 Run TensorBoard locally with:
 ```bash
@@ -162,7 +164,7 @@ tensorboard --logdir results
 
 ## Documentation & Further Reading
 
-For a comprehensive understanding of the project’s background, methodology, and future recommendations, please refer to the **Embodied_Intelligence_NASA_EELS_robot.pdf** document located at the repository root. You can also [read and download the report online](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/blob/main/Embodied_Intelligence_NASA_EELS_robot.pdf).
+For a comprehensive understanding of the project’s background, methodology, and future recommendations, please refer to the **Embodied_Intelligence_NASA_EELS_robot.pdf** document located at the repository root. You can also [read and download the report 📄](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/blob/main/Embodied_Intelligence_NASA_EELS_robot.pdf) online.
 
 ---
 
