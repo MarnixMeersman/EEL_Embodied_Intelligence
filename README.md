@@ -1,10 +1,8 @@
-Below is an updated version of your README with enhanced documentation, a clearer project background, and explicit reference to the PDF file in the repository root.
-
----
-
 # NASA EELS Locomotion Simulation in Unity
 
-An advanced simulation project to model the locomotion of NASA’s EELS robot in environments inspired by Enceladus, one of Saturn’s moons. This project uses Unity with the ML-Agents toolkit and state‐of‐the‐art reinforcement learning algorithms to recreate and analyze complex movement behaviors.
+Before diving in, please [read and download the full report](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/blob/main/Embodied_Intelligence_NASA_EELS_robot.pdf) for comprehensive background, detailed results, and an in-depth discussion of our methodology.
+
+An advanced simulation project that models the locomotion of NASA’s EELS robot using Unity. This project utilizes the ML-Agents toolkit and reinforcement learning algorithms (PPO and SAC) to recreate and analyze complex movement behaviors in environments inspired by Enceladus, one of Saturn’s moons.
 
 ---
 
@@ -26,7 +24,9 @@ An advanced simulation project to model the locomotion of NASA’s EELS robot in
 
 ## Introduction
 
-This repository hosts the simulation for the NASA EELS Locomotion project, where we aim to emulate the snake-like movement of the EELS robot. The simulation is built in Unity and leverages both the [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and reinforcement learning algorithms—namely Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC)—to evaluate locomotion strategies. The primary objective is to provide a reproducible environment where machine learning agents can learn efficient navigation over varied terrains, from simple flat surfaces to complex, obstacle-laden settings inspired by Enceladus.
+Welcome to the NASA EELS Locomotion Simulation repository. This simulation project recreates the locomotion strategies of the NASA EELS robot—designed for exploring challenging terrains like those on Enceladus. Built in Unity, the project leverages both the [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and cutting-edge reinforcement learning techniques (PPO and SAC) to train and evaluate robot behavior.
+
+![image](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/assets/57674797/d654cd11-aabb-4d21-9638-5658251d0b84)
 
 ---
 
@@ -34,11 +34,11 @@ This repository hosts the simulation for the NASA EELS Locomotion project, where
 
 ### Project Background
 
-NASA’s EELS robot is designed for exploring challenging terrains, such as the icy and uneven surfaces of Enceladus. With its modular, segmented body, the robot is capable of “screw locomotion,” a unique movement method that enables it to traverse narrow passages and irregular terrain. This simulation seeks to validate the locomotion strategies through embodied intelligence—where the interaction between the robot’s physical structure and its environment plays a crucial role.
+NASA’s EELS robot is engineered to traverse extreme environments with its segmented, snake-like design, capable of “screw locomotion” for maneuvering over irregular terrain. The goal of this simulation is to validate these locomotion strategies in a realistic, physics-based environment using reinforcement learning.
 
 ### Project Sketch
 
-Below is a simplified visual sketch of the project’s core components and data flow:
+Below is a simplified visual diagram of the project’s main components:
 
 ```
        +------------------------------------+
@@ -48,41 +48,45 @@ Below is a simplified visual sketch of the project’s core components and data 
                         |
                         v
        +------------------------------------+
-       |         Simulation Environment     |
-       |          (Unity & ML-Agents)         |
+       |      Simulation Environment        |
+       |         (Unity & ML-Agents)        |
        +----------------+-------------------+
                         |
                         v
        +------------------------------------+
-       |      Reinforcement Learning        |
-       |      (PPO / SAC Algorithms)        |
+       |   Reinforcement Learning (PPO/SAC) |
        +----------------+-------------------+
                         |
                         v
        +------------------------------------+
-       |         Performance Metrics        |
-       |   (TensorBoard, YouTube, Logs)       |
+       |       Performance Metrics          |
+       | (TensorBoard, YouTube, Logs)       |
        +------------------------------------+
 ```
-
-This diagram summarizes the overall architecture—from the physical design of the EELS robot, through its simulation and learning, to the analysis of its performance.
 
 ---
 
 ## Key Features
 
 - **Dual Training Environments:**  
-  - **Simple Environment (EEL folder):** A flat terrain for initial tests and faster prototyping.  
-  - **Complex Environment (EEL_Complex folder):** An enriched environment with diverse obstacles to simulate Enceladus-like conditions.
-
-- **Reinforcement Learning:**  
-  Uses Unity’s ML-Agents toolkit to implement PPO and SAC algorithms for training robust locomotion behaviors.
-
+  - **Simple Environment (EEL folder):** A flat terrain ideal for initial tests and rapid prototyping.
+  - **Complex Environment (EEL_Complex folder):** An enriched setting with diverse obstacles, replicating the conditions on Enceladus.
+  
+- **Reinforcement Learning Integration:**  
+  Utilizes Unity’s ML-Agents with PPO and SAC to develop robust locomotion strategies.
+  
 - **Configurable Hyperparameters:**  
-  Easily tweak training configurations through files in the `Config` folder to experiment with different learning rates, batch sizes, and neural network architectures.
-
+  Modify training settings (learning rate, batch size, network architecture) through the configuration files in the `Config` folder.
+  
 - **Detailed Documentation:**  
-  Complete documentation is provided in the accompanying PDF file, **Embodied_Intelligence_NASA_EELS_robot.pdf**, located in the repository root.
+  For an in-depth analysis of the simulation’s design, methodology, and performance, refer to the accompanying **Embodied_Intelligence_NASA_EELS_robot.pdf** located at the repository root.
+
+- **Visual Assets:**  
+  All original image references are preserved for clear visual guidance:
+  - Environment visualization:
+    ![image](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/assets/57674797/d654cd11-aabb-4d21-9638-5658251d0b84)
+  - Configuration overview:
+    ![image](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/assets/57674797/7fb08f89-e98c-4700-b4d1-3c2e5c2e4d3a)
 
 ---
 
@@ -100,7 +104,7 @@ To run the simulation and training scripts, ensure you have the following instal
 3. **Unity ML-Agents Toolkit:**  
    - Follow the [official installation guide](https://github.com/Unity-Technologies/ml-agents) to set up dependencies.
 4. **Python & Required Libraries:**  
-   - For running the OpenAI Gym API, install Python 3.x along with necessary packages:
+   - For running the OpenAI Gym API, install Python 3.x and required packages:
      ```bash
      pip install mlagents gym
      ```
@@ -109,32 +113,34 @@ To run the simulation and training scripts, ensure you have the following instal
 
 ## Configuration
 
-The `Config` folder contains all the configuration files for the simulation’s hyperparameters and training settings. Key parameters include:
+The `Config` folder contains files with hyperparameters and training settings. Key aspects include:
 
 - **Learning Rate & Schedule:**  
-  Configure different learning rate settings for PPO (linear decay) and SAC (constant).
+  PPO employs a linear decay schedule while SAC uses a constant rate.
   
-- **Batch Size & Buffer Size:**  
-  Adjust these to optimize training performance based on your computational resources.
+- **Batch & Buffer Sizes:**  
+  Tweak these parameters to optimize training speed based on your hardware.
   
 - **Neural Network Architecture:**  
-  Modify the number of layers and hidden units to experiment with the learning capacity of your model.
+  Adjust the number of layers and hidden units to experiment with the agent's learning capacity.
 
-Refer to the comments in each configuration file for further details on the parameters.
+Refer to inline comments within the configuration files for detailed explanations.
+
+![image](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/assets/57674797/7fb08f89-e98c-4700-b4d1-3c2e5c2e4d3a)
 
 ---
 
 ## Results & Performance
 
-Training results are visualized using TensorBoard. For a comprehensive view of performance metrics, visit our public TensorBoard page:
+Training outcomes can be tracked using TensorBoard. Explore the performance metrics and experiment logs at:
 
 - [Public TensorBoard Experiment](https://tensorboard.dev/experiment/oKkN7ge1QjSlHY9vKnE77Q/#scalars)
 
-Additionally, a demonstration video is available on YouTube:
+A demonstration video showcasing the simulation in action is available on YouTube:
 
 - [EELS Simulation Demo](https://youtu.be/LdKwgdQfkKw)
 
-Use the following command to run TensorBoard locally:
+Run TensorBoard locally with:
 ```bash
 tensorboard --logdir results
 ```
@@ -144,39 +150,48 @@ tensorboard --logdir results
 ## Repository Structure
 
 - **EEL:**  
-  Contains the simple training environment with minimal obstacles.
+  Contains the simple training environment.
 - **EEL_Complex:**  
-  Hosts the complex training environment with enriched physics and multiple obstacles.
+  Houses the complex environment with additional obstacles.
 - **Config:**  
   Configuration files for hyperparameters and training setups.
 - **Embodied_Intelligence_NASA_EELS_robot.pdf:**  
-  Detailed report/documentation on the project, including methodology, experiments, and analysis.
+  Detailed project report/documentation covering methodology, experiments, and analysis.
 
 ---
 
 ## Documentation & Further Reading
 
-For a detailed overview of the project’s background, methodology, results, and future work recommendations, please refer to the **Embodied_Intelligence_NASA_EELS_robot.pdf** document in the repository root. This report provides comprehensive insights into the design choices, simulation setup, and experimental outcomes.
+For a comprehensive understanding of the project’s background, methodology, and future recommendations, please refer to the **Embodied_Intelligence_NASA_EELS_robot.pdf** document located at the repository root. You can also [read and download the report online](https://github.com/MarnixMeersman/EEL_Embodied_Intelligence/blob/main/Embodied_Intelligence_NASA_EELS_robot.pdf).
 
 ---
 
 ## Acknowledgments
 
-This project is built upon the contributions of the [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and its community. Special thanks to the researchers, engineers, and educators who have advanced the fields of embodied intelligence and reinforcement learning.
+This project is built on the contributions of the [Unity ML-Agents Toolkit](https://github.com/Unity-Technologies/ml-agents) and the supportive community behind it. Special thanks to all researchers and engineers advancing embodied intelligence and reinforcement learning.
 
 ---
 
 ## Contributing
 
-We welcome contributions to further improve the simulation and documentation. To contribute:
+We welcome contributions! To contribute:
 
 1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. Push your branch:
+   ```bash
+   git push origin feature/your-feature
+   ```
 5. Open a pull request.
 
-Please follow our code style guidelines and provide detailed documentation with your contributions.
+Please adhere to our coding and documentation guidelines.
 
 ---
 
@@ -186,5 +201,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Feel free to explore, contribute, and provide feedback. Thank you for your interest in the NASA EELS Locomotion Simulation project!
-
+Feel free to explore, contribute, and share your feedback. Thank you for your interest in the NASA EELS Locomotion Simulation project!
